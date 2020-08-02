@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'appAngular';
+  title = '¡Que calor hace en Madrid!';
+  name = 'Ronald';
+
+  changeTitle(){
+    this.title = '¡Que venga el Otoño ya!';
+  }
 }
