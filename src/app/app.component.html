@@ -1,6 +1,9 @@
 <h1>{{title}}</h1>
 
 <button (click)="changeTitle()">Cambiar el título</button>
+<br>
+
+<input type="text" [(ngModel)]="cityName"> {{cityName}}
 <button (click)="addCity()">Agregar ciudad</button>
 
 <ul>
