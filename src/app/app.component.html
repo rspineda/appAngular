@@ -1,9 +1,8 @@
 <h1>{{title}}</h1>
 
-<button (click)='changeTitle()'>Cambiar el título</button>
+<button (click)="changeTitle()">Cambiar el título</button>
+<button (click)="addCity()">Agregar ciudad</button>
 
 <ul>
-  <li>Hello</li>
-  <li>Hallo</li>
-  <li>Bonjour</li>
+  <li *ngFor="let city of cities">{{city}}</li>
 </ul>
