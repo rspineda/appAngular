@@ -17,6 +17,11 @@ export class AppComponent {
 
   addCity(){
     this.cities.push(this.cityName);
+    this.cityName = '';
+  }
+
+  emptyCities(){
+    this.cities = [];
   }
 
 }

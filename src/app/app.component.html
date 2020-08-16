@@ -3,9 +3,22 @@
 <button (click)="changeTitle()">Cambiar el título</button>
 <br>
 
-<input type="text" [(ngModel)]="cityName"> {{cityName}}
+<input type="text" [(ngModel)]="cityName" (keydown.enter)="addCity()"> {{cityName}}
 <button (click)="addCity()">Agregar ciudad</button>
+<button (click)="emptyCities()">Eliminar ciudades</button>
+
+
 
 <ul>
+  <li *ngIf="cities.length === 0">No hay ciudades</li>
   <li *ngFor="let city of cities">{{city}}</li>
 </ul>
+
+
+<div *ngIf="cityName === 'Madrid'">
+  es Madrid. De Madrid al cielo!!
+</div>
+
+<div *ngIf="cityName === 'Llanes'">
+  ohh Llanes, que bonito es Llanes!!
+</div>
