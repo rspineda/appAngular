@@ -15,6 +15,8 @@
 </ul>
 
 
+<!--
+
 <div *ngIf="cityName === 'Madrid'">
   es Madrid. De Madrid al cielo!!
 </div>
@@ -22,3 +24,15 @@
 <div *ngIf="cityName === 'Llanes'">
   ohh Llanes, que bonito es Llanes!!
 </div>
+
+-->
+
+
+<div [ngSwitch]="cityName">
+  <p *ngSwitchCase="'Madrid'">Es Madrid. De Madrid al cielo</p>
+  <p *ngSwitchCase="'Llanes'">Ohh Llanes, que bonito es Llanes</p>
+  <p *ngSwitchCase="'Ribadesella'">Ribadesella, que fiesta tiene Ribadesella!</p>
+  <p *ngSwitchDefault>No se ha introducido ninguna ciudad chula</p>
+</div>
+
+
