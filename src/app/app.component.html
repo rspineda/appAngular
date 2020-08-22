@@ -11,7 +11,11 @@
 
 <ul>
   <li *ngIf="cities.length === 0">No hay ciudades</li>
-  <li *ngFor="let city of cities">{{city}}</li>
+  <li *ngFor="let city of cities; index as i">{{city}} index: {{i}}
+    <strong *ngIf="i === 0">Primera ciudad de la lista</strong>
+    <button (click)="deleteItem(i)">Borrar ciudad</button>
+    <button (click)="updateItem(i)">Actualizar ciudad</button>
+  </li>
 </ul>
 
 

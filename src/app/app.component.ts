@@ -24,4 +24,12 @@ export class AppComponent {
     this.cities = [];
   }
 
+  deleteItem(index: number){
+    this.cities.splice(index, 1);
+  }
+
+  updateItem(index: number){
+    this.cities[index] = 'actualizado';
+  }
+
 }
