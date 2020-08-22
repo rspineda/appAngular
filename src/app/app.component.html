@@ -39,4 +39,16 @@
   <p *ngSwitchDefault>No se ha introducido ninguna ciudad chula</p>
 </div>
 
+<ul>
+  <li *ngFor="let user of users">
+    Nombre: {{user.name}}
+    Edad: {{user.age}}
+    Soltero: {{user.isSingle ? 'Si.' : 'No.'}}
+    imagen: {{user.avatar}}
+    <img [src]="user.avatar">
+  </li>
+</ul>
+
+
+
 
